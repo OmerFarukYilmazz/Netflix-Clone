@@ -1,7 +1,8 @@
 /* Genel Ayarlar */
 
 *{
-    /*border: 1px solid purple;*/
+    /*
+    border: 1px solid purple;*/
     color: white;
 }
 
@@ -9,37 +10,39 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #141414;
-    color: #fff;    
 }
 
-/*
+
 .header-container {   
     /*margin: 10px 10px;
     padding: 10px 10px;
-    border: 1px solid green;
+    border: 1px solid green;*/       
+    position: absolute; /* putting on border div*/   
+    width: 100%; /* make the div width horizontally same as body width*/  
+     
 }
-*/
+
 header{
+
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-between; /* put space between child (primary nav - secondary nav) */    
+    align-items: center; /*put header items to center of header div | vertical because defaul flex direction is row)
+    /*
     background-color: #141414;
-    
-    /*border: 1px solid black;
-    margin: 10px 10px;
-    padding: 10px 10px;*/
+    border: 1px solid white;*/    
+    margin: 0 40px;
+    padding: 10px 10px;
 }
 .active{
     color: whitesmoke ;
-    
+    font-weight: bold;    
 }
 
 .primary-navigation {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 45px;    
-    margin: 7.5px 2.5px;
+    align-items: center; /* for putting  img + nav items to center of pri-nav div | vertical */
+    gap: 50px; /*gap between nav child (img - nav item)*/
     /*
     border: 1px solid red;
     */
@@ -47,42 +50,41 @@ header{
 }
 
 .primary-navigation img {
-    height: 50px;
-    margin-left: 40px;
-    /*
-    border: 1px solid yellow;
-    */
+    height: 50px;  
+    /*  
+    border: 1px solid yellow;*/
 }
 
 .nav-items {
-    display: flex;
-    gap: 20px;
+    display: flex; 
+    gap: 20px; /*gap between child nav item */
 }
 
 .nav-items a {    
-    text-decoration: none;
-    font-size: 14px;
+    text-decoration: none; /*for delete border */
+    font-size: 16px;
 }
 
 
 .secondary-navigation {
     display: flex;
-    align-items: center;
-    align-content: center;
-    margin: auto 70px;
-    gap: 15px;
+    align-items: start;
+    justify-content: center;
+    margin: 0 40px;
+    
 }
 
 .secondary-navigation-buttons button {
     
     background: none;
-    border: none;
+    border: none; /*no border*/
     cursor: pointer;
 }
 
 .secondary-navigation .icon {
-    height: 25px;
+    height: 35px;
     color: white;
+    border-radius: 10%; /* rounding border*/
 }
 
 
@@ -105,8 +107,7 @@ header{
     position: absolute;    
     display: flex;    
     flex-direction: column;
-    margin:  50px;
-    
+    margin:  50px;    
 }
 .banner-container h1 {
     font-size: 3rem;
@@ -146,21 +147,21 @@ header{
     margin: 0;
 }
 
-.movies-item {
+.movies-item {    
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    cursor: grab;  /* El işaretçisi */
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+    cursor: grab;  
 }
 
 .movies-item:active {
-    cursor: grabbing;  /* Tıklanıldığında el kapanır işaretçisi */
+    cursor: grabbing;  
 }
 
 .movies-item::-webkit-scrollbar {
-    display: none;  /* Safari ve Chrome */
+    display: none; 
 }
 
 .movies-item img {    

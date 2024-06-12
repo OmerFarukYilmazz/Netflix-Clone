@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - section.offsetLeft;
-            const walk = (x - startX) * 1.5; // Kaydırma hızını azaltarak daha akıcı bir hareket sağlamak için çarpan
+            const walk = (x - startX) * 1.5; 
             section.scrollLeft = scrollLeft - walk;
         });
 
